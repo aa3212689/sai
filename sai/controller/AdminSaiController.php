@@ -9,6 +9,7 @@ class AdminSaiController extends AdminBaseController{
     }
 
     public function add(){
+	    //测试复制会更新多少
         return $this->fetch();
     }
 
