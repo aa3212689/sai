@@ -25,7 +25,8 @@ class AdminSaiController extends AdminBaseController{
 
         if (!empty($data['photo_urls'])) {
 
-            $data['photo']         = cmf_asset_relative_url($data['photo_urls'][0]);
+            $link= cmf_asset_relative_url($data['photo_urls'][0]);
+            $data['photo']=cmf_get_image_url($link);
         }
         $SaiModel->allowField(true)->data($data,true)->isUpdate(false)->save();
     }
