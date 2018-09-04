@@ -21,6 +21,13 @@ class AdminSaiController extends AdminBaseController{
     public function getdata(){
         $data   = $this->request->param();
         dump($data);
+        $SaiModel = new SaiModel();
+
+        if (!empty($data['photo_urls'])) {
+
+            $data['photo']         = cmf_asset_relative_url($data['photo_urls'][0]);
+        }
+        $SaiModel->allowField(true)->data($data,true)->isUpdate(false)->save();
     }
 
 }
