@@ -28,6 +28,9 @@ class AdminSaiController extends AdminBaseController{
             $link= cmf_asset_relative_url($data['photo_urls'][0]);
             $data['photo']=cmf_get_image_url($link);
         }
+        $data['start_time']= strtotime($data['start_time']);
+        $data['stop_time']= strtotime($data['stop_time']);
+
         $SaiModel->allowField(true)->data($data,true)->isUpdate(false)->save();
     }
 
