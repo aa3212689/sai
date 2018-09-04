@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    games: []
   },
 
   /**
@@ -21,9 +21,9 @@ Page({
       success: data => {
         if (data.code == 1) {
           //  成功
-          // this.setData({
-          //   banner: data.data.items
-          // })
+          this.setData({
+            games: data.data
+          })
         }
 
         if (data.code == 0) {
