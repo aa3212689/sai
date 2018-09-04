@@ -1,1 +1,36 @@
-<view></view>
+<!-- <block wx:for-items="{{games}}" wx:key="id" > 
+      <view class="flex item" bindtap='hit' data-id="{{item.id}}">
+          <view class="item_left">
+              <image src="{{item.more.thumbnail}}"/>
+          </view>
+          <view class="item_middle">
+              <view><text class="title">{{item.post_title}}</text></view>
+                         <view><text class="desc">{{item.post_keywords}}</text></view>
+          </view>
+          <view class="item_right {{item.post_excerpt?'btn_show':'btn_hide'}}" >
+              <view><navigator class="start" target="miniProgram" open-type="navigate" app-id="{{item.post_excerpt}}" data-id="{{item.id}}" data-index="{{index}}"  
+          extra-data="" path="{{item.post_source}}" version="release">开 始</navigator ></view>
+          </view>
+      </view>
+   </block>  -->
+   <view class="flex">
+<view class="left">
+    <view class="left_photo">
+        <image src="../../image/盒子.jpg"></image>
+        <text>盒子</text>
+    </view>
+
+</view>
+<view class="middle">
+  
+    <text class="middle_text">变色</text>
+    <text class="middle_text">比赛奖励</text>
+    <text class="middle_text">第一名</text>
+    <text class="middle_text">第二名</text>
+    <text class="middle_text">第三名</text>
+</view>
+<view class="right">
+    <button class="show">比赛结束</button>
+    <button class="show">比赛记录</button>
+</view>
+</view>

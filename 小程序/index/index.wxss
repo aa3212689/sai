@@ -1,0 +1,29 @@
+image{
+  
+  display: block;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+
+.flex {
+  display: flex;
+}
+.left{
+  margin-left:60rpx;
+}
+.middle{
+  display: block;
+   width: 200rpx;
+  height: 200rpx;
+}
+.middle_text{
+  display: block;
+  margin-left:40rpx;
+}
+button.show{
+  margin-bottom:40rpx;
+
+
+  background-color:orange;
+}
