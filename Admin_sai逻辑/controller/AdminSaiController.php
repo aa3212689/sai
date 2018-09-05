@@ -1,17 +1,41 @@
 <?php
 namespace app\sai\controller;
 use cmf\controller\AdminBaseController;
-use  app\sai\model\SaiModel;
+use app\portal\model\PortalPostModel;
+use app\portal\service\PostService;
+use app\portal\model\PortalCategoryModel;
 use think\Db;
-use app\sai\service\PostService;
+use app\admin\model\ThemeModel;
 
 class AdminSaiController extends AdminBaseController{
 
     public function index(){
-        $SaiModel = new SaiModel();
+//        $SaiModel = new SaiModel();
 //        dump($SaiModel->find());
 
 
+        $param = $this->request->param();
+//        dump($param);
+
+        $categoryId = $this->request->param('category', 0, 'intval');
+
+        $postService = new PostService();
+        $data        = $postService->adminArticleList($param);
+        dump($data);
+
+        $data->appends($param);
+
+        $portalCategoryModel = new PortalCategoryModel();
+        $categoryTree        = $portalCategoryModel->adminCategoryTree($categoryId);
+
+//        $this->assign('start_time', isset($param['start_time']) ? $param['start_time'] : '');
+//        $this->assign('end_time', isset($param['end_time']) ? $param['end_time'] : '');
+//        $this->assign('keyword', isset($param['keyword']) ? $param['keyword'] : '');
+//        $this->assign('articles', $data->items());
+//        $this->assign('category_tree', $categoryTree);
+//        $this->assign('category', $categoryId);
+//        $this->assign('page', $data->render());
+//视图
         return $this->fetch();
     }
 

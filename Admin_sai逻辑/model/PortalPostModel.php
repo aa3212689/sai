@@ -8,9 +8,10 @@
 // +----------------------------------------------------------------------
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
-namespace app\portal\model;
+namespace app\sai\model;
 
 use app\admin\model\RouteModel;
+
 use think\Model;
 use think\Db;
 
