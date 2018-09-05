@@ -1,11 +1,10 @@
 <?php
 namespace app\sai\controller;
 use cmf\controller\AdminBaseController;
-use app\portal\model\PortalPostModel;
-use app\portal\service\PostService;
-use app\portal\model\PortalCategoryModel;
-use think\Db;
-use app\admin\model\ThemeModel;
+
+use app\sai\service\PostService;
+use app\sai\model\PortalCategoryModel;
+
 
 class AdminSaiController extends AdminBaseController{
 
