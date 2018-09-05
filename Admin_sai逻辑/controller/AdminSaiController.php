@@ -2,12 +2,14 @@
 namespace app\sai\controller;
 use cmf\controller\AdminBaseController;
 use  app\sai\model\SaiModel;
+use think\Db;
+use app\sai\service\PostService;
 
 class AdminSaiController extends AdminBaseController{
 
     public function index(){
         $SaiModel = new SaiModel();
-        dump($SaiModel->find());
+//        dump($SaiModel->find());
 
 
         return $this->fetch();
